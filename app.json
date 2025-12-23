@@ -48,7 +48,9 @@
           "./assets/fonts/Rubik-Regular.ttf",
           "./assets/fonts/Rubik-SemiBold.ttf",
           "./assets/fonts/BeauRivage.ttf",
-          "./assets/fonts/Kalnia.ttf"
+          "./assets/fonts/Kalnia.ttf",
+          "./assets/fonts/Kalnia-Bold.ttf",
+          "./assets/fonts/Kalnia-Regular.ttf"
         ]
       }
     ]

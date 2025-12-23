@@ -11,7 +11,7 @@ export default function Index() {
       }}
     >
 
-      <Text className="font-bold text-2xl my-10 text-blue-300">Welcomet to Hansbilding</Text>
+      <Text className="text-3xl my-10 text-navy font-kalnia-bold">Welcome to Hansbilding</Text>
       <Link href="/sign-in">Sign In</Link>
       <Link href="/explore">Explore</Link>
       <Link href="/profile">Profile</Link>
