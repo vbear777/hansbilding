@@ -50,7 +50,9 @@
           "./assets/fonts/BeauRivage.ttf",
           "./assets/fonts/Kalnia.ttf",
           "./assets/fonts/Kalnia-Bold.ttf",
-          "./assets/fonts/Kalnia-Regular.ttf"
+          "./assets/fonts/Kalnia-Regular.ttf",
+          "./assets/fonts/BBHBartle.ttf",
+          "./assets/fonts/BBHBogle.ttf"
         ]
       }
     ]

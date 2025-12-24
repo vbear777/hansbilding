@@ -12,8 +12,10 @@ module.exports = {
         "rubik-medium": ['Rubik-Medium', 'sans-serif'],
         "beaurivage": ['BeauRivage', 'sans-serif'],
         "kalnia": ['Kalnia', 'sans-serif'],
-        "kania-regular": ["Kalnia-Regular", "sans-serif"],
-        "kania-bold": ["Kalnia-Bold", "sans-serif"],
+        "kalnia-regular": ["Kalnia-Regular", "sans-serif"],
+        "kalnia-bold": ["Kalnia-Bold", "sans-serif"],
+        "bbh-bartle": ["BBHBartle", "sans-serif"],
+        "bbh-bogle": ["BBHBogle", "sans-serif"],
       },
       colors: {
         "navy": "#2f4156",

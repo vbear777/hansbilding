@@ -11,6 +11,10 @@ export default function RootLayout() {
     "Rubik-SemiBold": require('../assets/fonts/Rubik-SemiBold.ttf'),
     "BeauRivage": require('../assets/fonts/BeauRivage.ttf'),
     "Kalnia": require('../assets/fonts/Kalnia.ttf'),
+    "Kalnia-Bold": require('../assets/fonts/Kalnia-Bold.ttf'),
+    "Kalnia-Regular": require('../assets/fonts/Kalnia-Regular.ttf'),
+    "BBHBartle": require('../assets/fonts/BBHBartle.ttf'),
+    "BBHBogle": require('../assets/fonts/BBHBogle.ttf'),
   })
 
   useEffect(() => {
