@@ -24,6 +24,12 @@ module.exports = {
         "beige": "#f5efeb",
         "white": "#ffffff",
         "cream": "#b39a84",
+        black: {
+          DEFAULT: "#000000",
+          100: "#8C8E98",
+          200: "#666876",
+          300: "#191D31",
+        },
       }
     },
   },
