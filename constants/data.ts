@@ -73,6 +73,10 @@ export const settings = [
     icon: icons.calendar,
   },
   {
+    title: "Payments",
+    icon: icons.wallet,
+  },
+  {
     title: "Profile",
     icon: icons.person,
   },
@@ -95,10 +99,6 @@ export const settings = [
   {
     title: "Security",
     icon: icons.shield,
-  },
-  {
-    title: "Payments",
-    icon: icons.wallet,
   },
 ];
 

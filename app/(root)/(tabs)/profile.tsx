@@ -34,7 +34,7 @@ const Profile = () => {
                 contentContainerClassName="pb-32 px-7"
             >
                 <View className="flex flex-row items-center justify-between mt-5">
-                    <Text className="text-xl font-bbh-bogle">
+                    <Text className="text-xl font-rubik-medium">
                         Profile
                     </Text>
                     <Image source={icons.bell} className="size-5" />
@@ -44,22 +44,26 @@ const Profile = () => {
                     <View className="flex flex-col items-center relative mt-5">
                         <Image source={images.avatar} className="size-44 relative rounded-full" />
                         <TouchableOpacity className="absolute bottom-11 right-2">
-                            <Image source={icons.edit} className="size-9" />
+                            <Image source={icons.edit} className="size-9 mb-3 mr-5" />
                         </TouchableOpacity>
-                        <Text className="text-2xl font-bbh-bogle mt-2">oblivion | VBear777 </Text>
+                        <Text className="text-2xl font-rubik-bold mt-5">oblivion | VBear777 </Text>
                     </View>
                 </View>
 
                 <View className="flex flex-col mt-10">
                     <SettingsItem icon={icons.calendar} title="My Bookings"/>
-                    <SettingsItem icon={icons.wallet} title="Payment"/>
+                    <SettingsItem icon={icons.wallet} title="Payments"/>
                 </View>
 
-                <View className="flex flex-col mt-5 border-t pt-5 border-teal">
+                <View className="flex flex-col mt-5 border-t pt-5 border-beige">
                     {settings.slice(2).map((item, index) => (
                         <SettingsItem key={index} {...item} />
                     ))}
                 </View>
+{/*            <View className="flex flex-col mt-5 border-t pt-5 border-teal">
+                    <SettingsItem icon={icons.logout} title="Logout" textStyle="text-red-300" showArrow={false} onPress={handleLogout} />
+                </View>*/}
+     
             </ScrollView>
         </SafeAreaView>
     )
