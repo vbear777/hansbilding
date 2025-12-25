@@ -1,8 +1,9 @@
 import { settings } from "@/constants/data";
 import icons from "@/constants/icons";
-import images from "@/constants/images";
+import { logout } from "@/lib/appwrite";
+import { useGlobalContext } from "@/lib/global-provider";
 import React from "react";
-import { Image, ImageSourcePropType, ScrollView, Text, TouchableOpacity, View } from "react-native";
+import { Alert, Image, ImageSourcePropType, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 interface SettingsItemProps {
@@ -27,6 +28,19 @@ const SettingsItem = ({ icon, title, onPress, textStyle, showArrow = true }: Set
 
 {/* Profile Bio Avatar */}
 const Profile = () => {
+    const { user, refetch } = useGlobalContext();
+    console.log("Avatar URL:", user?.avatar);
+    const handleLogout = async () => {
+        const result = await logout();
+
+        if(result) {
+            Alert.alert("Success", "You have been logged out successfully");
+            refetch();
+        } else {
+            Alert.alert("Error", "An error occured while logging out")
+        }
+    };
+
     return (
         <SafeAreaView className="h-full bg-white">
             <ScrollView
@@ -42,11 +56,19 @@ const Profile = () => {
 
                 <View className="flex-row justify-center flex">
                     <View className="flex flex-col items-center relative mt-5">
-                        <Image source={images.avatar} className="size-44 relative rounded-full" />
+                        <Image
+                            // Cek jika avatar adalah string dan tidak mengandung "[object"
+                            source={{ 
+                                uri: typeof user?.avatar === 'string' && !user?.avatar.includes('[object') 
+                                    ? user?.avatar 
+                                    : `https://ui-avatars.com/api/?name=${user?.name}` 
+                            }}
+                            className="size-44 relative rounded-full"
+                        />
                         <TouchableOpacity className="absolute bottom-11 right-2">
                             <Image source={icons.edit} className="size-9 mb-3 mr-5" />
                         </TouchableOpacity>
-                        <Text className="text-2xl font-rubik-bold mt-5">oblivion | VBear777 </Text>
+                        <Text className="text-2xl font-rubik-bold mt-5">{user?.name}</Text>
                     </View>
                 </View>
 
@@ -60,9 +82,10 @@ const Profile = () => {
                         <SettingsItem key={index} {...item} />
                     ))}
                 </View>
-{/*            <View className="flex flex-col mt-5 border-t pt-5 border-teal">
+
+                <View className="flex flex-col mt-5 border-t pt-5 border-beige">
                     <SettingsItem icon={icons.logout} title="Logout" textStyle="text-red-300" showArrow={false} onPress={handleLogout} />
-                </View>*/}
+                </View>
      
             </ScrollView>
         </SafeAreaView>

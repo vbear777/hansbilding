@@ -71,7 +71,7 @@ export async function getCurrentUser() {
     const userAvatar = avatar.getInitials(response.name);
     return {
       ...response,
-      avatar: userAvatar.toString(),
+      avatar: userAvatar ? userAvatar.toString() : "",
     };
   } catch (error) {
     console.log(error);
