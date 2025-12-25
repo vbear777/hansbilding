@@ -73,10 +73,6 @@ export const settings = [
     icon: icons.calendar,
   },
   {
-    title: "Payments",
-    icon: icons.wallet,
-  },
-  {
     title: "Profile",
     icon: icons.person,
   },
@@ -85,20 +81,24 @@ export const settings = [
     icon: icons.bell,
   },
   {
-    title: "Security",
-    icon: icons.shield,
-  },
-  {
     title: "Language",
     icon: icons.language,
   },
   {
-    title: "Help Center",
+    title: "Invite People",
+    icon: icons.people,
+  },
+  {
+    title: "Guide Center",
     icon: icons.info,
   },
   {
-    title: "Invite Friends",
-    icon: icons.people,
+    title: "Security",
+    icon: icons.shield,
+  },
+  {
+    title: "Payments",
+    icon: icons.wallet,
   },
 ];
 
