@@ -1,3 +1,4 @@
+import { Card, FeatureCard } from "@/components/Card";
 import Search from "@/components/Search";
 import icons from "@/constants/icons";
 import images from "@/constants/images";
@@ -19,11 +20,32 @@ export default function Index() {
           </View>
         </View>
         <Search />
+
+        <View className="my-5">
+          <View className="flex flex-row items-center justify-between">
+            <Text className="text-xl font-bbh-bartle text-teal">Featured</Text>
+            <TouchableOpacity>
+                <Text className="text-base font-rubik-bold text-black-300">See All</Text>
+            </TouchableOpacity>
+          </View>
+
+          <View className="flex flex-row gap-5 mt-5">
+            <FeatureCard />
+            <FeatureCard />
+            <FeatureCard />
+          </View>
+        </View>
+
         <View className="flex flex-row items-center justify-between">
-          <Text className="text-xl font-bbh-bartle text-teal">Featured</Text>
+          <Text className="text-xl font-bbh-bartle text-teal">Our Recommendation</Text>
           <TouchableOpacity>
-              <Text className="text-base font-rubik-bold text-black-300">See Al</Text>
+              <Text className="text-base font-rubik-bold text-black-300">See All</Text>
           </TouchableOpacity>
+        </View>
+
+        <View className="flex flex-row gap-5 mt-5">
+          <Card />
+          <Card />
         </View>
       </View>
     </SafeAreaView>
