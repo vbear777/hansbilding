@@ -20,6 +20,7 @@ module.exports = {
       colors: {
         "navy": "#2f4156",
         "teal": "#567c8d",
+        "eastern-blue": "#16a1b2",
         "skyblue": "#c8d9e6",
         "beige": "#f5efeb",
         "white": "#ffffff",
