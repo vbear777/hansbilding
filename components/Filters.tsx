@@ -1,5 +1,5 @@
 import { categories } from "@/constants/data";
-import { useLocalSearchParams } from "expo-router";
+import { router, useLocalSearchParams } from "expo-router";
 import { useState } from "react";
 import { ScrollView, Text, TouchableOpacity } from "react-native";
 
@@ -7,7 +7,16 @@ const Filters = () => {
     const params = useLocalSearchParams<{filter?: string}>();
     const [selectedCategory, setSelectedCategory] = useState(params.filter || 'All');
 
-    const handleCategory = (category: string) => {};
+    const handleCategory = (category: string) => {
+        if(selectedCategory === category){
+            setSelectedCategory('All');
+            router.setParams({ filter: 'All' });
+            return;
+        }
+
+        setSelectedCategory(category);
+        router.setParams({ filter: category });
+    };
 
     return (
         <ScrollView 
