@@ -1,4 +1,5 @@
 import { Card, FeatureCard } from "@/components/Card";
+import Filters from "@/components/Filters";
 import Search from "@/components/Search";
 import icons from "@/constants/icons";
 import images from "@/constants/images";
@@ -15,9 +16,9 @@ export default function Index() {
             <View className="flex flex-col items-start ml-2 justify-center">
               <Text className="text-xs font-rubik text-black-100">Good Morning</Text>
               <Text className="text-base font-rubik-medium text-black-300">oblivion</Text>
-              <Image source={icons.bell} className="size-6" />
             </View>
           </View>
+          <Image source={icons.bell} className="size-6" />
         </View>
         <Search />
 
@@ -37,13 +38,15 @@ export default function Index() {
         </View>
 
         <View className="flex flex-row items-center justify-between">
-          <Text className="text-xl font-bbh-bartle text-teal">Our Recommendation</Text>
+          <Text className="text-xl font-bbh-bogle text-teal">Recommendation</Text>
           <TouchableOpacity>
               <Text className="text-base font-rubik-bold text-black-300">See All</Text>
           </TouchableOpacity>
         </View>
 
-        <View className="flex flex-row gap-5 mt-5">
+        <Filters />
+
+        <View className="flex flex-row gap-5 mt-3">
           <Card />
           <Card />
         </View>

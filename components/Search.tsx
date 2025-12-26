@@ -19,7 +19,7 @@ const Search = () => {
     return (
         <View className="flex flex-row items-center justify-between w-full rounded-lg bg-beige border border-teal mt-5 py-2">
             <View className="flex-1 flex flex-row items-center justify-start z-50">
-                <Image source={icons.search} className="size-5" />
+                <Image source={icons.search} className="size-7 ml-5" />
                 <TextInput 
                     value={search}
                     onChangeText={handleSearch}
@@ -29,7 +29,7 @@ const Search = () => {
             </View>
 
             <TouchableOpacity>
-                <Image source={icons.filter} className="size-5" />
+                <Image source={icons.filter} className="size-7 mr-3" />
             </TouchableOpacity>
         </View>
     )
