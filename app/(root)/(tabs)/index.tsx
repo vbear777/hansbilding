@@ -1,4 +1,4 @@
-import { FeatureCard } from "@/components/Card";
+import { Card, FeatureCard } from "@/components/Card";
 import Filters from "@/components/Filters";
 import Search from "@/components/Search";
 import icons from "@/constants/icons";
@@ -12,8 +12,8 @@ export default function Index() {
   return (
     <SafeAreaView className="bg-white h-full">
       <FlatList 
-        data={[1, 2, 3, 4]} 
-        renderItem={({ item }) => <Text>{item}</Text>}
+        data={[1, 2, 3, 4, 5, 6]} 
+        renderItem={({ item }) => <Card />}
         keyExtractor={(item) => item.toString()}
         numColumns={2}
         contentContainerClassName="pb-32"
@@ -23,7 +23,14 @@ export default function Index() {
             <View className="px-5">
               <View className="flex flex-row items-center justify-between mt-5">
                 <View className="flex flex-row items-center">
-                  <Image source={{ uri: user?.avatar }} className="size-12 rounded-full" />
+                  <Image
+                      source={{ 
+                          uri: typeof user?.avatar === 'string' && !user?.avatar.includes('[object') 
+                              ? user?.avatar 
+                              : `https://ui-avatars.com/api/?name=${user?.name}` 
+                      }}
+                      className="size-12 relative rounded-full"
+                  />
                   <View className="flex flex-col items-start ml-2 justify-center">
                     <Text className="text-xs font-rubik text-black-100">Good Morning</Text>
                     <Text className="text-base font-rubik-medium text-black-300">{user?.name}</Text>
@@ -41,7 +48,7 @@ export default function Index() {
                   </TouchableOpacity>
                 </View>
                 <FlatList 
-                  data={[1, 2, 3]} 
+                  data={[1, 2, 3, 4]} 
                   renderItem={({item}) => <FeatureCard />} 
                   keyExtractor={(item) => item.toString()}
                   horizontal

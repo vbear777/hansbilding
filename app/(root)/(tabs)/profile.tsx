@@ -57,7 +57,6 @@ const Profile = () => {
                 <View className="flex-row justify-center flex">
                     <View className="flex flex-col items-center relative mt-5">
                         <Image
-                            // Cek jika avatar adalah string dan tidak mengandung "[object"
                             source={{ 
                                 uri: typeof user?.avatar === 'string' && !user?.avatar.includes('[object') 
                                     ? user?.avatar 
