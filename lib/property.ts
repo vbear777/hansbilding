@@ -14,32 +14,25 @@ export interface Review {
   rating: number;
 }
 
-export interface GalleryItem extends Models.Document {
+export interface Gallery extends Models.Document {
   image: string;
 }
 
-/* ====== MAIN PROPERTY ====== */
 export interface Property extends Models.Document {
   name: string;
+  address: string;
   type: string;
-  image: string;
-  price: number;
   rating: number;
-
+  description: string;
+  area: number;
   bedrooms: number;
   bathrooms: number;
-  area: number;
-
-  description: string;
-  address: string;
-
-  agent: Agent;
-
+  price: number;
   facilities: string[];
-
-  gallery: GalleryItem[];
-
-  reviews: Review[];
+  image: string;
+  geolocation: string;
+  agent: string;
+  gallery: string[];
 }
 
 
