@@ -136,7 +136,7 @@ export async function getProperties({
 
 
 //get property by id
-export async function getPropertiesById({ id }: { id: string }) {
+export async function getPropertyById({ id }: { id: string }) {
   try {
       const result = await databases.getDocument(
         config.databaseId!,
