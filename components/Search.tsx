@@ -25,6 +25,7 @@ const Search = () => {
                     onChangeText={handleSearch}
                     placeholder="Search for your ideal house here..."
                     className="text-sm font-rubik text-black-300 ml-2 flex-1"
+                    returnKeyType="search"
                 />
             </View>
 
