@@ -38,7 +38,7 @@ export const FeatureCard = ({ item: { image, rating, name, address, price}, onPr
 }
 
 
-export const Card = ({ onPress }: Props ) => {
+export const Card = ({ item: { image, rating, name, address, price}, onPress }: Props) => {
     return (
         <TouchableOpacity 
             onPress={onPress} 
@@ -46,20 +46,20 @@ export const Card = ({ onPress }: Props ) => {
         >
             <View className="flex flex-row items-center absolute px-2 top-5 right-5 bg-white/90 p-1 rounded-full z-50">
                 <Image source={icons.star} className="size-2.5 " />
-                <Text className="text-xs font-rubik-bold text-black-300 ml-0.5">4.6</Text>
+                <Text className="text-xs font-rubik-bold text-black-300 ml-0.5">{rating}</Text>
             </View>
 
-            <Image source={images.bali} className="w-full h-40 rounded-lg" />
+            <Image source={{ uri: image }} className="w-full h-40 rounded-lg" />
 
             <View className="flex flex-col mt-2">
-                <Text className="text-base font-bbh-bogle text-black-300" numberOfLines={1}>Cozy Villa</Text>
+                <Text className="text-base font-bbh-bogle text-black-300" numberOfLines={1}>{name}</Text>
                 <Text className="text-xs font-rubik text-black-200">
-                    Beach 2, Lovina Villa
+                    {address}
                 </Text>
 
                 <View className="flex flex-row items-center justify-between mt-2">
                     <Text className="text-base font-rubik-bold text-teal">
-                        $1,800
+                        ${price}
                     </Text>
                     <Image source={icons.heart} className="w-5 h-5 mr-2" tintColor="#191d31" />
                 </View>
