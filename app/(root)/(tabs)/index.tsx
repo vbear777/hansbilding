@@ -82,6 +82,11 @@ export default function Index() {
                       <Text className="text-base font-rubik-bold text-black-300">See All</Text>
                   </TouchableOpacity>
                 </View>
+
+                {
+                  latestPropertiesLoading ? (
+                    <ActivityIndicator size="large" className="text-skyblue mt-5" />
+                  ) : !latestProperties || latestProperties.length === 0 ? <NoResults /> : (
                 <FlatList 
                   data={latestProperties} 
                   renderItem={({item}) => <FeatureCard item={item} onPress={() => handleCardPress(item.$id)} />} 
@@ -90,7 +95,7 @@ export default function Index() {
                   bounces={false}
                   showsHorizontalScrollIndicator={false}
                   contentContainerClassName="flex gap-5 mt-5"  
-                />
+                />)}
               </View>
 
               <View className="flex flex-row items-center justify-between">
