@@ -25,7 +25,7 @@ const Filters = () => {
             className="mt-3 mb-2" 
         >
             {categories.map((item) => (
-                <TouchableOpacity key={item.title} onPress={() => handleCategory(item.category)} className={`flex flex-col items-start mr-4 px-4 py-2 rounded-full ${selectedCategory === item.category ? 'bg-teal' : 'bg-white border border-teal'}`}>
+                <TouchableOpacity key={item.category} onPress={() => handleCategory(item.category)} className={`flex flex-col items-start mr-4 px-4 py-2 rounded-full ${selectedCategory === item.category ? 'bg-teal' : 'bg-white border border-teal'}`}>
                     <Text className={`text-sm ${selectedCategory === item.category ? 'text-white font-rubik-bold mt-0.5' : 'text-black-200 font-rubik'}`}>{item.title}</Text>
                 </TouchableOpacity>
             ))}
