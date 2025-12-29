@@ -26,7 +26,6 @@
 + Typescript
 + Tailwind CSS 3.4.19
 + Expo Go
-+ Zustand
 + Appwrite
 
 ## 🌟 Feature
